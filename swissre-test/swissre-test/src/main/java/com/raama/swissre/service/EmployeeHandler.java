@@ -86,7 +86,6 @@ public class EmployeeHandler {
         for (Employee manager : empList) {
             Double avgSal = averageSalaries.get(manager.getId());
             if (avgSal == null || avgSal <= 0.0) {
-                // no subordinates or average cannot be computed; skip
                 continue;
             }
 
@@ -111,11 +110,11 @@ public class EmployeeHandler {
         Map<String,Double> managersEarnMore = new HashMap<>();
         
          for (Employee manager : empList) {
-            Double avgObj = averageSalaries.get(manager.getId());
-            if (avgObj == null || avgObj <= 0.0) {
+            Double avgSal = averageSalaries.get(manager.getId());
+            if (avgSal == null || avgSal <= 0.0) {
                 continue;
             }
-            double averageSalary = avgObj;
+            double averageSalary = avgSal;
             double managerSalary = manager.getSalary();
 
             if (managerSalary > averageSalary) {
