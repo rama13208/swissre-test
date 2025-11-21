@@ -51,8 +51,8 @@ public class Main {
                     System.out.println("Manager Hierachy. Give file name from config folder.");
                     String  file = scanner.nextLine();
                     System.out.println("manager count threshold ?");
-                    int  cunt  = Integer.parseInt(scanner.nextLine());
-                    List<Employee> employeeHierachy =  handler.getEmployeesMoreManagers(cunt, FileHandler.loadEmployees(Path.of("swissre-test/config/"+file)));                 
+                    int  mCount  = Integer.parseInt(scanner.nextLine());
+                    List<Employee> employeeHierachy =  handler.getEmployeesMoreManagers(mCount, FileHandler.loadEmployees(Path.of("swissre-test/config/"+file)));                 
 
                     employeeHierachy.forEach(emp->{
                         System.out.println("Manager more hirarcheey :  id = "+emp.getId());
