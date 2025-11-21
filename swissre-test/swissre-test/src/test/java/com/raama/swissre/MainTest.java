@@ -49,7 +49,7 @@ public class MainTest {
     }
 
     @Test
-    public void testOption4_hierarchy() throws Exception {
+    public void testHierarchy() throws Exception {
        int  cunt  = 4;
         List<Employee> employeeHierachy =  handler.getEmployeesMoreManagers(cunt, empList );                 
 
